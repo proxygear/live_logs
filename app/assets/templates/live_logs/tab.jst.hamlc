@@ -1,0 +1,7 @@
+.right
+  %a.close{href: '#'}
+    %i.fa.fa-times
+%a.name{href:'#'}
+  = @get('name')
+  - if @get('match')
+    [#{@get('match')}]

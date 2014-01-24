@@ -1,0 +1,5 @@
+%h2 New tab
+%form#new_log{"accept-charset" => "UTF-8", action: "/", method: "post"}
+  .input.string.required.logs_file_name
+    %select{name: "file_name", :autofocus => true}
+  %input.button.success.expand{name: "commit", type: "submit", value: "Add"}

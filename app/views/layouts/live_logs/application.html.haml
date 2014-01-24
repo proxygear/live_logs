@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Log live !
+    %meta{'http-equiv' => "content-language", :content => 'en'}
+    %meta{'http-equiv' => "Content-Type", :content => "text/html; charset=ISO-8859-1"}
+    %meta{'Author' => 'Benoit Molenda'}
+    %meta{'Publisher' => 'Benoit Molenda'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1'}
+    /[if IE]
+      %script{src: "http://html5shim.googlecode.com/svn/box/html5.js"}
+      /%link{rel: :icon, href: "icon.png", type: "image/x-icon"}
+    = stylesheet_link_tag    "live_logs/application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    = yield
+    = javascript_include_tag "live_logs/application"

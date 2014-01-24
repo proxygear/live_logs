@@ -1,0 +1,62 @@
+#board
+  position: fixed
+  top: $tabs-height + $header-height
+  bottom: 0px
+  right: 0
+  left: 0
+  background: black
+  .logs.hide
+    display: none
+  .container
+    position: fixed
+    left: $custom_gutter
+    right: $custom_gutter
+    bottom: 5*$custom_gutter
+    overflow-x: scroll
+    background: transparent
+    top: $tabs-height + $header-height + $custom_gutter
+    span.stream_error, code
+      font-family: $body-font-family
+      font-weight: 200
+      line-height: 24px
+      font-size: 12px
+    span.stream_error
+      color: #b00
+    code
+      &.match
+        color: #76f
+      color: #0b0
+  .command
+    position: fixed
+    bottom: 0px
+    left: 0px
+    right: 0px
+    height: 5*$custom_gutter
+    padding: 0 $custom-gutter
+    .inner
+      padding-top: 1*$custom_gutter
+      margin-left: 3*$custom_gutter
+      input[type='text']
+        padding: 0 $custom_gutter
+        margin: 0
+
+        height: 3*$custom_gutter
+        line-height: 3*$custom_gutter
+        font-size: 1*$custom_gutter
+
+        background: #333
+        color: #999
+        border: none
+
+        &[placeholder]
+          color: #555
+        &:focus
+          border: none
+          border-radius: 0
+    a
+      line-height: 5*$custom_gutter
+      font-size: 2*$custom_gutter
+      float: left
+      color: #333
+      &.active
+        color: #0F0

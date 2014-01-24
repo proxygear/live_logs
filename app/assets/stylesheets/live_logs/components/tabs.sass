@@ -1,0 +1,53 @@
+$tab-width: 200px
+$tab-height: $custom_gutter * 4
+$tabs-height: $custom_gutter * 5
+
+#tabs
+  z-index: 1
+  position: absolute
+  display: block
+  top: $header-height
+  right: 0
+  left: 0
+  overflow-x: auto
+  overflow-y: hidden
+  height: $tabs-height
+  background: white
+  .wrapper
+    width: 11 * $tab-width
+  ul
+    padding: 0
+    padding-top: $tabs-height - $tab-height
+    margin: 0
+    li
+      font-size: 14px
+      padding: 0 $custom_gutter * 2
+      margin-left: $custom_gutter * 1.5
+      display: block
+      width: $tab-width
+      height: $tab-height
+      float: left
+      line-height: $tab-height
+      vertical-align: middle
+      border-radius: 5px 5px 0 0
+      background: #aaa
+      a
+        color: white
+
+      a.up
+        color: #5F5
+      &:hover
+        background: #ccc
+        a
+          color: #555
+          &.up
+            color: #0a0
+        transition: background-color 500ms linear
+        a
+          transition: color 500ms linear
+      &.active
+        background: black
+        &:hover
+          background: black
+        a
+          color: #ccc

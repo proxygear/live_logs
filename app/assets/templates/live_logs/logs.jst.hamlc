@@ -1,0 +1,7 @@
+.logs
+  .container
+  .command
+    %a.active{href: '#', alt: 'Scroll down when new lines'}
+      %i.fa.fa-anchor
+    .inner
+      %input{type: 'text', placeholder: 'Tape to filter'}
