@@ -18,8 +18,20 @@ Because a client asked me to perform the following 'Test-Task'
     cd live_logs
     bundle
     cd spec/dummy
-    rails s
+    passenger s
     open http://localhost:3000
+
+##Why passenger ?
+
+Actually you can use whatever service you like that handle localy multiple requests simultenously.
+Streaming request does not stop unless client cut the connection.
+So if you use a 'single request at a time' solution, after starting streaming logs, your app will be stucked.
+But, you can steal `$> echo 'test' > logs/my.log` to emulate traffic.
+
+* Webrick is one at a time
+* Puma can be tuned to allow simultaneous requests
+* Passenger does the job
+* For the others, RFDocs...
 
 ##How to use it ?
 
