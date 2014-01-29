@@ -45,6 +45,16 @@ In your `routes.rb`add:
 
 Then bundle your app, run your server and visit '/whatver_path'
 
+##Does it works on Heroku ?
+
+Nop or not as expected.
+Heroku cut open connection after N seconds as far as I know.
+Even if SourceEvent restart automagicaly broken connection, the streaming will restart at
+file logs end minus ~ 25 lines.
+So you'll see passing at each reconnection 25 lines already seen.
+This may be fixed with a bunch of extra work,
+that you may do it yourself.
+
 ##How does it works ?
 
 It uses:
