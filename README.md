@@ -18,7 +18,7 @@ Because a client asked me to perform the following 'Test-Task'
     cd live_logs
     bundle
     cd spec/dummy
-    passenger s
+    passenger start
     open http://localhost:3000
 
 ##Why passenger ?
@@ -59,10 +59,11 @@ that you may do it yourself.
 
 It uses:
 
+* Ruby 1.9+
 * file-tail gem to keep reading log files
 * Rails ActionController::Live to stream the logs
 * Javascript EventSource to get a persistant connection
-* MarionetteJS in addition of Backbone for the interactivity
+* MarionetteJS (before v2) in addition of Backbone (before v1) for the interactivity
 * And zurb foundation because ... it's my default CSS Framework
 
 ##Needs, questions or feedbacks ?
