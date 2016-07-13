@@ -29,8 +29,8 @@ Gem::Specification.new do |s|
 
   # Use jquery as the JavaScript library
   s.add_dependency  'jquery-rails'
-  s.add_dependency  'marionette-rails'
-  s.add_dependency  'backbone-on-rails'
+  s.add_dependency  'marionette-rails', '< 2'
+  s.add_dependency  'backbone-on-rails', '< 1'
   s.add_dependency  'high_voltage'
 
   s.add_dependency  'file-tail'

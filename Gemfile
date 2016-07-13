@@ -10,9 +10,24 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-ruby '2.0.0'
+#ruby '2.0.0'
 
 gem 'passenger'
+gem 'foundation-rails', '>5.0.0'
+gem 'font-awesome-rails'
+gem 'haml-rails'
+gem 'sass-rails', '>= 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '>= 4.0.0'
+gem 'haml_coffee_assets'
+
+# Use jquery as the JavaScript library
+gem  'jquery-rails'
+gem  'marionette-rails', '< 2'
+gem  'backbone-on-rails', '< 1'
+gem  'high_voltage'
+
+gem  'file-tail'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -20,5 +35,4 @@ group :doc do
 end
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
-
+#gem 'debugger', group: [:development, :test]
